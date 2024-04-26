@@ -5,18 +5,18 @@ import AddressIcon from '../../components/Images/address.svg';
 import PhoneIcon from '../../components/Images/phone.svg';
 import EmailIcon from '../../components/Images/email.svg';
 import ClockIcon from '../../components/Images/clock.svg';
-
+import { useTranslation } from 'react-i18next';
 const Contacts = () => {
-    
+  const { t } = useTranslation();
     return (
         <div className="container">
-        <h1 className="car-title">Contacts</h1>
+        <h1 className="car-title">{t('titleContacts')}</h1>
         <div className={css.wrapperContacts}>
           
         <div className={css.contacts}>  
          <address>
-      <span className={css.spanBlock}><p className={css.indentedParagraph}> Киев</p></span> 
-      <span className={css.spanBlockA} ><i className={css.fasA}><img src={AddressIcon} alt="Address-Icon" /></i>ул. Радистов 34ж </span> 
+      <span className={css.spanBlock}><p className={css.indentedParagraph}> {t('Kiev')}</p></span> 
+      <span className={css.spanBlockA} ><i className={css.fasA}><img src={AddressIcon} alt="Address-Icon" /></i>{t('Street')}</span> 
       <span className={css.spanBlock}><i className={css.fas}><img src={EmailIcon} alt="Email-Icon" /></i><a className={css.linkPhone} href="mailto:valdisbeketov@gmail.com">valdisbeketov@gmail.com</a></span>  
       <span className={css.spanBlock}>
   <i className={css.fas}><img src={PhoneIcon} alt="Phone-Icon" /></i>
@@ -30,9 +30,9 @@ const Contacts = () => {
   <i className={css.fas}>
     <img src={ClockIcon} alt="Clock-Icon" />
   </i>
-  Пн - Cб: 8:00 - 20:00
+  {t('clock1')}
   </div></span>
-  <span className={css.spanBlockB}><p>Вс: 10:00 - 17:00</p></span>
+  <span className={css.spanBlockB}><p>{t('clock2')}</p></span>
   </address> 
   </div>
 
