@@ -1,0 +1,24 @@
+/* LanguageSelector.css */
+.languageSelector {
+    display: flex;
+    
+  }
+  
+  .languageSelector button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    
+  }
+  
+  .languageSelector img {
+    width: 30px;
+    height: auto;
+  }
+  .languageSelector .activ img {
+    width: 40px;
+    height: auto;;
+  }
+
+  

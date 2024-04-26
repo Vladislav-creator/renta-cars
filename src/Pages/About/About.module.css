@@ -1,0 +1,13 @@
+.wrapperAbout {
+    display: flex;
+    justify-content: space-between;
+   
+}
+.about {
+    width: 60%;
+    padding: 10px;
+    word-wrap: break-word; /* Добавлено свойство для переноса текста */
+}
+.indentedParagraph{
+    text-indent: 20px; 
+}

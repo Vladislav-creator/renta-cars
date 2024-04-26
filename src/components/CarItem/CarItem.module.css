@@ -1,0 +1,84 @@
+
+.imageItem {
+  max-width: 100%;
+  height: 220px;
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+.carItem {
+    position: relative;
+    width: 25%; /* Каждый элемент занимает 25% ширины родительского контейнера */
+    padding: 10px;
+  }
+  .heart {
+    position: absolute;
+    top: 10px; /* Расстояние от верхнего края */
+    right: 10px; /* Расстояние от правого края */
+    z-index: 3; /* Поднимаем сердечко над изображением */
+    cursor: pointer; /* Делаем курсор указателем при наведении */
+    background-color: transparent; /* Установка прозрачного фона для квадратика */
+    border: none; 
+  }
+  .heart img {
+    width: 20px; /* Размер сердечка */
+    height: auto; /* Автоматическая высота */
+  }
+  .heartIcon {
+    color: #ffffff; /* Установка белого цвета для сердечка по умолчанию */
+  }
+  .heartIconUnder {
+    color: gray;
+    position: absolute;
+    top: 11px; 
+    right: 15px; 
+    z-index: 1; /* Поднимаем сердечко над изображением */
+    cursor: pointer; /* Делаем курсор указателем при наведении */
+    background-color: transparent; /* Установка прозрачного фона для квадратика */
+    border: none;
+  }
+  .heartIconUnder img {
+    width: 40px; /* Размер сердечка */
+    height: auto; /* Автоматическая высота */
+  }
+  .heartIcon.favorite {
+    color: #ff0000; /* Установка красного цвета для сердечка, когда он в избранном состоянии */
+  }
+  
+  .buttonModal {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    border-color: transparent ;
+    background-color: rgba(0, 50, 255, 0.5); /* Обычный голубой цвет */
+  transition: background-color 0.3s ease; 
+  }
+  .buttonModal:hover,
+.buttonModal:focus {
+  background-color: rgba(0, 50, 255, 0.8); /* Более яркий голубой цвет */
+}
+
+.wraperTitleItemContentPrice {
+  display: flex; /* Используем flexbox */
+  justify-content: space-between; /* Размещаем элементы по краям контейнера */
+  width: 100%;
+  
+}
+
+.titleItemContent {
+  font-weight: 500;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.infoItemContent {
+  font-size: 12px;
+  color: #999;
+}
+.wraperInfoItemContent{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 15px;
+}
