@@ -8,8 +8,8 @@ const About = () => {
         <h1 className="car-title">{t('titleAbout')}</h1>
         <div className={css.wrapperAbout}>
         <div className={css.about}>  <p className={css.indentedParagraph}>{t('About')} </p> </div>
-        <div>
-         <img src={Photo1} alt='rent-car1' width='500px'/>
+        <div className={css.photo}>
+         <img src={Photo1} alt='rent-car1' width='100%'/>
          </div>
         </div>
         </div>

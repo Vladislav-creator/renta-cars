@@ -1,14 +1,61 @@
+@media screen and (max-width:  766px) {
 .wrapperAbout {
     display: flex;
-    justify-content: space-between;
-   
+    flex-direction: column;
+   gap: 20px;
 }
-.about {
-    width: 60%;
-    padding: 10px;
-    word-wrap: break-word; /* Добавлено свойство для переноса текста */
 }
+@media screen and (min-width:  766px) {
+    .wrapperAbout {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .photo {
+        width: 100%; 
+    }
+    .about {
+        width: 100%;
+        padding: 10px;
+        word-wrap: break-word; /* Добавлено свойство для переноса текста */
+    }
+    }
+
 .indentedParagraph{
     text-indent: 20px;
-    font-size: 20px; 
+    font-size: 15px; 
+}
+@media screen and (min-width: 766px) and (max-width: 1000px) {
+    .wrapperAbout {
+       gap: 10px;
+    }
+    .indentedParagraph {
+        font-size: 16px; 
+    }
+    .photo {
+        width: 50%; 
+    }
+    .about {
+        width: 50%;
+        padding: 10px;
+        word-wrap: break-word; 
+    }
+}
+@media screen and (min-width: 1001px) and (max-width: 1239px) {
+    .wrapperAbout {
+        gap: 23px;
+     }
+    .indentedParagraph {
+        font-size: 20px; 
+    }
+    
+}
+
+@media screen and (min-width: 1240px)  {
+    .wrapperAbout {
+        gap: 26px;
+     }
+    .indentedParagraph {
+        font-size: 25px;
+    }
 }

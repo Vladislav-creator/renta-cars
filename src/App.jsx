@@ -1,13 +1,13 @@
+import React, { useState } from 'react';
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n'; // ваш объект i18n
-import { useState } from 'react';
-import hornSound from './Sound/6a9eda36651d8d7.mp3';
 import { Loader } from './components/Loader/Loader';
 import { Suspense, lazy } from 'react';
 import css from './App.module.css';
 import { NavLink, Navigate, Route, Routes } from 'react-router-dom';
 import LanguageSelector from './components/LanguageSelector/LanguageSelector.jsx';
-import { useTranslation } from 'react-i18next';
+import ContactIcons from './components/ContactIcons/ContactIcons.jsx';
+import MenuModal from './components/MenuModal/MenuModal.jsx';
 const CatalogCar = lazy(() => import('./Pages/CatalogCar/CatalogCar.jsx'));
 const Home = lazy(() => import('./Pages/Home/Home.jsx'));
 const FavouriteCar = lazy(() => import('./Pages/FavouriteCar/FavouriteCar.jsx'));
@@ -15,21 +15,34 @@ const About = lazy(() => import('./Pages/About/About.jsx'));
 const Contacts = lazy(() => import('./Pages/Contacts/Contacts.jsx'));
 
 const App = () => {
-  const { t } = useTranslation();
- 
-
-  const [audio] = useState(new Audio(hornSound));
-
-  const handleButtonClick = () => {
-    audio.play();
+  const phoneNumber = '+380978556455';
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
-
   return (
     
     <I18nextProvider i18n={i18n}>
     <div>
       <header className={css.header}>
+        <div className={css.iconContainer}>
       <div className={css.iconRent}></div>
+      <div className={css.cars}>
+    <p>C</p>
+    <p>A</p>
+    <p>R</p>
+    <p>S</p>
+    <p></p>
+  </div>
+  <div className={css.renta}>
+    <p>R</p>
+    <p>E</p>
+    <p>N</p>
+    <p>T</p>
+    <p>A</p>
+  </div>
+      </div>
         <NavLink className="header-link" to="/">
           Home
         </NavLink>
@@ -46,19 +59,13 @@ const App = () => {
         Contacts 
         </NavLink>
         <div className={css.wraperRightHeader}>
+          <div className={css.wraperContactIcons}>
+          <ContactIcons phoneNumber={phoneNumber}/>
+          </div>
+          
         <LanguageSelector className={css.languageSelector} />
-
-
-        <div className={css.steeringWheel}>
-          <button className={css.signal} onClick={handleButtonClick}></button>
-          <div className={css.putMe}>
-    <p>{t('p')}</p>
-    <p>{t('u')}</p>
-    <p>{t('t')}</p>
-    <p>{t('m')}</p>
-    <p>{t('e')}</p>
-  </div>
-        </div>
+        <button className={css.menu} onClick={toggleMenu}>Menu</button>
+      {isMenuOpen && <MenuModal onCloseMenu={toggleMenu} />}
         </div>
       </header>
       <main>

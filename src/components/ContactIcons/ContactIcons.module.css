@@ -1,0 +1,73 @@
+.iconContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .icon {
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 26px;
+  }
+  
+  .phoneIcon {
+  
+    color: white;
+    &:hover,
+    &:focus {
+        color: #0F0;
+       
+  }
+  }
+  
+  .viberIcon {
+    color: purple;
+    &:hover,
+    &:focus {
+        color:#0000E6;
+        border-radius: 3px;
+  }
+  }
+  
+  .telegramIcon {
+    color: #000096;
+    &:hover,
+    &:focus {
+       color:#0000E6;
+        border-radius: 3px;
+  }
+  }
+  
+  .whatsappIcon {
+    color: green;
+    &:hover,
+    &:focus {
+        
+        color: #0F0;
+        
+  }
+  }
+  .numberPhone{
+    color: white;
+    margin-right: 10px;
+    background: transparent;
+    border: none;
+    &:hover,
+    &:focus {
+        color: #0F0;
+  }
+  }
+  .hiddenIcons {
+    display: none;
+  }
+  @media (max-width: 766px) {
+    .iconContainer  {
+      display: none;
+    }
+  }
+  @media (min-width: 900px) {
+    .hiddenIcons {
+      display: flex;
+    }
+  }
+  

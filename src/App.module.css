@@ -1,3 +1,4 @@
+
 .header {
     background: linear-gradient(45deg, rgba(24,187,156,1),rgba( 100, 149, 237, 1 ),rgba( 255, 127, 80, 1 ) );
     width: 100%;
@@ -5,79 +6,88 @@
     display: flex;
   align-items: center;
   gap: 20px;
-  padding-left: 20px;
+  padding: 0 15px;
   
 }
-.steeringWheel {
-    background-image: url(./components/Images/rul.png);
-    background-size: cover;
-    width: 70px;
-    height: 70px;
-    margin-right: 40px; 
-    position: relative;
-   
-  }
-  .putMe{
-    display: flex;
-  flex-direction: column; 
-    position: absolute;
-    font-size: 12px;
-    font-weight: 600;
-    right: -12px;
-    align-items: center;
-    color: antiquewhite;
-  }
 
+.wraperContactIcons{
+  display: none;
+}
+.wraperRightHeader{
+  display: flex;
+  gap: 10px;
+ margin-left: auto;
+}
+.menu{
+  border-radius: 5px;
+  border: none;
+  padding: 15px 10px;
+  color: white;
+  background-color: rgba(0, 50, 255, 0.5); /* Обычный голубой цвет */
+  transition: background-color 0.3s ease; 
+  }
+  .menu:hover,
+  .menu:focus {
+  background-color: rgba(0, 50, 255, 0.8); /* Более яркий голубой цвет */
+}
+@media screen and (min-width: 766px)  {
+  .menu{
+    display: none;
+  }
+}
+@media screen and (min-width: 902px)  {
+  .wraperContactIcons{
+    display:  flex;
+  }
   .wraperRightHeader{
     display: flex;
-    gap: 20px;
+    gap: 5px;
    margin-left: auto;
   }
-  
+}
+  .iconContainer{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+  }
     
   
   .iconRent{
+    position: absolute;
     background-image: url(./components/Images/rent-car.png);
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 60px;
     background-repeat: no-repeat;
     background-size: auto; /* или другое значение, которое не растягивает картинку */
   background-position: center center;
- 
+    margin: 0 20px;
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
-  
+  top: 2px;
   }
  
-  .signal {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #800000;
+  .cars{
+    display: flex;
+    flex-direction: column; 
     position: absolute;
-    top: 40%;
-    left: 36%;
-    transform: translate(-50%, -50%);
-    border: 1px solid wheat;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    animation: pulse 1s infinite alternate, brighten 1s infinite alternate;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    right: -14px;
+    top: 9px;
+    align-items: center;
+   
   }
   
+  .renta{
+    flex-direction: column; 
+    position: absolute;
+    font-size: 12px;
+    font-weight: 600;
+    top: 2px;
+    left: 5px;
+    align-items: center;
+    color: yellow;
+  }
+
   
-  /* Описание анимации */
-  @keyframes pulse {
-    from {
-      transform: scale(1); /* Начальный размер */
-    }
-    to {
-      transform: scale(1.1); /* Конечный размер */
-    }
-  }
-  @keyframes brighten {
-    from {
-      filter: brightness(1); /* Начальная яркость (обычный цвет) */
-    }
-    to {
-      filter: brightness(1.5); /* Конечная яркость (ярче) */
-    }
-  }

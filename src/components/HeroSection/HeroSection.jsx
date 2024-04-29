@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
 import css from './HeroSection.module.css'; // Подключаем модуль CSS
 import { useTranslation } from 'react-i18next';
+import hornSound from '../../Sound/6a9eda36651d8d7.mp3';
 const PASSWORD = process.env.REACT_APP_PASSWORD;
 
 const HeroSection = () => {
+  const [audio] = useState(new Audio(hornSound));
+
+  const handleButtonClick = () => {
+    audio.play();
+  };
   const [result, setResult] = useState("");
   const { t } = useTranslation();
   const handleSubmit = async (e) => {
@@ -38,8 +44,21 @@ const HeroSection = () => {
     <div className={css.heroSection}>
       <div className={css.heroOverlay}>
         <h1 className={css.heroContent}>{t('Welcome')}<span className={css.rentaYellow}>{t('RENTA')}</span>{t('CARS')}</h1>
+        <div className={css.steeringWheel}>
+          <button className={css.signal} onClick={handleButtonClick}></button>
+          <div className={css.putMe}>
+    <p>{t('p')}</p>
+    <p>{t('u')}</p>
+    <p>{t('t')}</p>
+    <p>{t('m')}</p>
+    <p>{t('e')}</p>
+  </div>
+        </div>
         <div className={css.heroContentForma}>
           <h2>{t('Find')}</h2>
+
+         
+
           <form onSubmit={handleSubmit} className={css.forma}>
             <input type="text" name="name" placeholder="Input name" className={css.formInput} />
             <input type="text" name="phone" placeholder="Input phone" className={css.formInput} defaultValue="+380" />
