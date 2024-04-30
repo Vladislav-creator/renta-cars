@@ -48,7 +48,7 @@ const Filter = ({ onFilter, onReset, carMakes, rentalPrices, allCars }) => {
           <option key={make} value={make}>{make}</option>
         ))}
       </select>
-      <select name="price" value={price} onChange={handleInputChange}>
+      <select className={css.formSelect} name="price" value={price} onChange={handleInputChange}>
         <option value="">Price</option>
         {rentalPrices.map(price => (
           <option key={price} value={price}>{price}</option>
