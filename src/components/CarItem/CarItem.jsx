@@ -57,7 +57,7 @@ const CarItem = ({ car, openModal }) => {
           &#10084;
         </span>
       </button> */}
-      <button onClick={toggleFavoriteClick} onTouchEnd={toggleFavoriteTouch} className={css.heart}>
+      <button onClick={toggleFavoriteClick} onTouchStart={toggleFavoriteTouch} className={css.heart}>
   {/* <span className={css.heartIcon} style={{ fill: isFavorite ? '#ff0000' : '#ffffff' }}> */}
   <span style={{ fill: isFavorite ? '#ff0000' : '#ffffff' }}>
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
