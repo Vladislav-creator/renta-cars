@@ -42,7 +42,7 @@ const Filter = ({ onFilter, onReset, carMakes, rentalPrices, allCars }) => {
 
   return (
     <form className={css.formSearch} onSubmit={handleSubmit}>
-      <select name="make" value={make} onChange={handleInputChange}>
+      <select className={css.formSelect} name="make" value={make} onChange={handleInputChange}>
         <option value="">Car Brand</option>
         {carMakes.map(make => (
           <option key={make} value={make}>{make}</option>

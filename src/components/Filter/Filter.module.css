@@ -1,8 +1,8 @@
-.formSearch select{
+.formSelect{
     height: 40px;
   }
 @media screen and (max-width: 643px){
-  .formSearch select{
+  .formSelect{
     height: 40px;
   }
   .formSearch {
