@@ -42,10 +42,17 @@ const CarItem = ({ car, openModal }) => {
   
     return carmod;
   }
+  const toggleFavoriteClick = () => {
+    handleToggleFavorite();
+  };
+
+  const toggleFavoriteTouch = () => {
+    handleToggleFavorite();
+  };
   return (
     <div className={css.carItem}>
       <img className={css.imageItem} src={car.img} alt={`${car.make} ${car.model}`} />
-      <button onClick={handleToggleFavorite} className={css.heart}>
+      <button onClick={toggleFavoriteClick} onTouchEnd={toggleFavoriteTouch} className={css.heart}>
         <span className={css.heartIcon} style={{ color: isFavorite ? '#ff0000' : '#ffffff' }}>
           &#10084;
         </span>

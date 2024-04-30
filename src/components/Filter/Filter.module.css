@@ -14,6 +14,11 @@
 }
 }
 @media screen and (min-width: 644px)and (max-width: 1239px) {
+  .formSelect{
+    height: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
 .formSearch {
     margin-bottom: 25px;
     margin-left: auto;
@@ -80,3 +85,32 @@
   .formSearch button[type="button"]:hover {
     background-color: #999;
   }
+
+/* 
+  .formSelect {
+    height: 40px;
+    width: 100%;
+    margin: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+    
+    
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    appearance: none; 
+    
+   
+    background-image: url('path/to/your-arrow-icon.svg');
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Позиция кастомной стрелки */
+  /*}
+  
+  /* При фокусе добавляем стиль */
+  /*
+  .formSelect:focus {
+    border-color: purple;
+  } */
