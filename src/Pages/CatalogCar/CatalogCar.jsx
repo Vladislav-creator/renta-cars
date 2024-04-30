@@ -121,7 +121,7 @@ export default function CatalogCar() {
     window.scrollTo({ top: 0, behavior: 'smooth' }); // Плавный скролл наверх
   };
   return (
-    <div className="container">
+    <div className={css.container}>
       <Filter onFilter={handleFilter} onReset={handleResetData} carMakes={carMakes} rentalPrices={rentalPrices} />
       <div className={css.imageGrid}>
         {data.map(item => (

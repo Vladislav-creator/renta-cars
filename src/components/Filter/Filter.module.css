@@ -1,15 +1,35 @@
+@media screen and (max-width: 644px){
+  .formSearch {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+  /* margin-left: auto;
+  margin-right: auto; */
+  justify-content: center; /* Центрируем содержимое по горизонтали */
+  align-items: center; 
+}
+}
+@media screen and (min-width: 644px)and (max-width: 1239px) {
 .formSearch {
     margin-bottom: 25px;
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
+    width: 99%;
     display: flex;
     justify-content: center; /* Центрируем элементы по горизонтали */
   }
-  
+}
+  @media screen and (min-width: 1240px)  {
+    .formSearch {
+      display: flex;
+       margin-left: auto;
+  margin-right: auto;
+      width: 75%;
+    }
+  }
   .formSearch select,
   .formSearch input[type="text"] {
-    width: 60%; /* Ширина инпутов и селектов */
+    width: 70%; /* Ширина инпутов и селектов */
     margin: 5px;
     padding: 10px;
     box-sizing: border-box;
@@ -20,7 +40,7 @@
   }
   
   .formSearch button {
-    width: 40%; /* Ширина кнопок */
+    width: 30%; /* Ширина кнопок */
     margin: 5px;
     padding: 10px;
     box-sizing: border-box;

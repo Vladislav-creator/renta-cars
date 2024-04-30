@@ -1,10 +1,15 @@
 
-  
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 25px 10px;
+}
   .imageGrid {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 20px; /* Убираем внешние отступы для создания компактного макета */
-    
+    justify-content: center; /* Центрируем содержимое по горизонтали */
+  align-items: center; 
   }
   
   

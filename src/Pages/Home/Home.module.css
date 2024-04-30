@@ -1,14 +1,177 @@
+.wraperOverlay {
+    position: relative;
+}
+.container{
+    padding: 10px;
+}
 .indentedParagraph {
     text-indent: 20px;
-    position: absolute;
-    top: 85px;
-    left: 50px;
     background: white;
-    width: 50%;
+    width: 100%;
     border-radius: 10px;
     padding: 10px;
     color: blue;
+    font-size: 14px;
+    margin-bottom: 10px;
 }
-.wraperOverlay {
-    position: relative;
+.titleFindCarForma{
+    font-size: 25px;
+}
+.heroContentForma {
+   
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 300px;
+    height: 250px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    border: 5px solid #9dc3e6;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: bisque;
+  }
+  .heroContentForma:hover,
+  .heroContentForma:focus{
+    border: 5px solid  #007bff; 
+  }
+  .forma{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+  }
+  .buttonSend {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    border-color: transparent ;
+    background-color: rgba(0, 50, 255, 0.5); /* Обычный голубой цвет */
+  transition: background-color 0.3s ease; 
+  }
+  .buttonSend:hover,
+.buttonSend:focus {
+  background-color: rgba(0, 50, 255, 0.8); /* Более яркий голубой цвет */
+}
+.formInput {
+  padding: 8px 12px; /* Увеличение высоты инпутов */
+  border: 2px solid #007bff; /* Голубой цвет рамки */
+  transition: border-color 0.3s ease; /* Плавное изменение цвета рамки */
+  outline: none;
+}
+.formInput:hover,
+.formInput:focus {
+  border-color: #0056b3; /* Синий цвет при наведении или фокусе */
+}
+.putMe{
+    display: none;
+  }
+  .signal{
+    display: none;
+  }
+
+
+@media screen and (min-width: 766px) and (max-width: 1239px)  {
+    .titleFindCarForma{
+        font-size: 20px;
+    }
+    .indentedParagraph {
+        position: absolute;
+        top: 65px;
+        left: 40px;
+        width: 50%;
+    }
+    .heroContentForma {
+        position: absolute;
+        bottom: 25px;
+        right: 10px;
+        gap: 5px;
+        width: 200px;
+        height: 180px; 
+    }
+    .buttonSend {
+        font-size: 16px;
+        padding: 7px; 
+    }
+}
+@media screen and (min-width: 1240px)  {
+    .titleFindCarForma{
+        font-size: 25px;
+    }
+    .indentedParagraph {
+        position: absolute;
+        top: 85px;
+        left: 50px; 
+        width: 50%;
+        font-size: 17px; 
+    }
+    .heroContentForma {
+        position: absolute;
+        bottom: 30px;
+        right: 10px;
+        gap: 15px;
+        width: 210px;
+        height: 210px; 
+    }
+    .buttonSend {
+        font-size: 16px;
+        padding: 10px; 
+    }
+    
+.steeringWheel {
+    background-image: url(../../components/Images/rul.png);
+    background-size: cover;
+    width: 70px;
+    height: 70px;
+    margin-right: 30px; 
+    position: absolute;
+    left: 100px;
+    bottom: 240px;
+    z-index: 1;
+  }
+  .putMe{
+    display: flex;
+    flex-direction: column; 
+    position: absolute;
+    font-size: 12px;
+    font-weight: 600;
+    right: -12px;
+    align-items: center;
+    color: blue;
+  }
+  .signal {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #800000;
+    position: absolute;
+    top: 40%;
+    left: 36%;
+    transform: translate(-50%, -50%);
+    border: 1px solid wheat;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: pulse 1s infinite alternate, brighten 1s infinite alternate;
+  }
+   /* Описание анимации */
+   @keyframes pulse {
+    from {
+      transform: scale(1); /* Начальный размер */
+    }
+    to {
+      transform: scale(1.1); /* Конечный размер */
+    }
+  }
+  @keyframes brighten {
+    from {
+      filter: brightness(1); /* Начальная яркость (обычный цвет) */
+    }
+    to {
+      filter: brightness(1.5); /* Конечная яркость (ярче) */
+    }
+  }
 }

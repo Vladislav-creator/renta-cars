@@ -16,6 +16,34 @@
     height: 100%;
    
   }
+  
+  .heroTitle {
+    margin-top: 14px;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  
+  
+
+.rentaYellow{
+  color: yellow;
+}
+/* .putMe{
+  display: none;
+}
+.signal{
+  display: none;
+} */
+@media screen and (min-width: 1240px)  {
+  
+  .heroTitle {
+    font-size: 40px;
+  }
+  
+  
   .heroOverlay::after {
     content: "";
     position: absolute;
@@ -23,70 +51,11 @@
     right: 0;
     width: 0;
     height: 0;
-    border-left: 450px solid transparent; /* Измените ширину и цвет границы, если нужно */
+    border-left: 450px solid transparent; 
     border-top: 450px solid white; 
     transform: rotate(90deg);
   }
-  
-  .heroContent {
-    margin-top: 14px;
-    color: white;
-    font-size: 40px;
-    text-align: center;
-  }
-  .heroContentForma {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 200px;
-    height: 200px;
-    text-align: center;
-    z-index: 1;
-    border: 5px solid #9dc3e6;
-    border-radius: 10px;
-    padding: 10px;
-  }
-  .heroContentForma:hover,
-  .heroContentForma:focus{
-    border: 5px solid  #007bff; 
-  }
-  .forma{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .buttonSend {
-    width: 100%;
-    font-size: 16px;
-    padding: 10px;
-    color: white;
-    border-radius: 10px;
-    border-color: transparent ;
-    background-color: rgba(0, 50, 255, 0.5); /* Обычный голубой цвет */
-  transition: background-color 0.3s ease; 
-  }
-  .buttonSend:hover,
-.buttonSend:focus {
-  background-color: rgba(0, 50, 255, 0.8); /* Более яркий голубой цвет */
-}
-.formInput {
-  padding: 8px 12px; /* Увеличение высоты инпутов */
-  border: 2px solid #007bff; /* Голубой цвет рамки */
-  transition: border-color 0.3s ease; /* Плавное изменение цвета рамки */
-  outline: none;
-}
-.formInput:hover,
-.formInput:focus {
-  border-color: #0056b3; /* Синий цвет при наведении или фокусе */
-}
-.rentaYellow{
-  color: yellow;
-}
-
-
+/* 
 .steeringWheel {
   background-image: url(../../components/Images/rul.png);
   background-size: cover;
@@ -123,20 +92,21 @@
   transition: background-color 0.3s, transform 0.3s;
   animation: pulse 1s infinite alternate, brighten 1s infinite alternate;
 }
- /* Описание анимации */
+ 
  @keyframes pulse {
   from {
-    transform: scale(1); /* Начальный размер */
+    transform: scale(1); 
   }
   to {
-    transform: scale(1.1); /* Конечный размер */
+    transform: scale(1.1); 
   }
 }
 @keyframes brighten {
   from {
-    filter: brightness(1); /* Начальная яркость (обычный цвет) */
+    filter: brightness(1); 
   }
   to {
-    filter: brightness(1.5); /* Конечная яркость (ярче) */
+    filter: brightness(1.5); 
   }
+} */
 }

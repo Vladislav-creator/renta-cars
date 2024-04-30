@@ -1,23 +1,65 @@
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 25px 15px;
+}
 .wrapperContacts {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-   
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+
 }
-.photo{
-  width: 30%;
+.contacts {
+  border: 1px solid white;
+  padding: 20px;
 }
-.map{
-  width: 30%;   
+.photo,
+.contacts {
+  width: 50%;
+  box-sizing: border-box; /* Учитываем padding в ширине блока */
+ 
 }
 
- .contacts {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    padding: 30px;
-    
-    border: 1px solid white;
+.map {
+  width: 100%;
+}
+
+/* Медиа-запросы для разных ширин экрана */
+
+/* От 960px и выше */
+@media (min-width: 999px) {
+  .photo,
+  .map {
+    width: 32%;
+  }
+
+  .contacts {
+    width: 32%;
+    /* border: 1px solid white;
+    padding: 20px; */
+  }
+}
+
+/* От 766px до 959px */
+@media (min-width: 766px) and (max-width: 1000px) {
+  .photo,
+  .contacts {
+    width: 48%;
+  }
+
+  .map {
+    width: 100%;
+  }
+}
+
+/* До 765px */
+@media (max-width: 765px) {
+  .photo,
+  .map,
+  .contacts {
+    width: 100%;
+  }
 }
 .indentedParagraph{
     text-indent: 36px;   

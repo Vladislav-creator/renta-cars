@@ -1,6 +1,8 @@
 
 .imageGrid {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -10px; /* Убираем внешние отступы для создания компактного макета */
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px; /* Убираем внешние отступы для создания компактного макета */
+  justify-content: center; /* Центрируем содержимое по горизонтали */
+align-items: center; 
   }
