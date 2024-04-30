@@ -26,23 +26,15 @@
     margin-left: 10px;
   }
   
-  
-
 .rentaYellow{
   color: yellow;
 }
-/* .putMe{
-  display: none;
-}
-.signal{
-  display: none;
-} */
+
 @media screen and (min-width: 1240px)  {
   
   .heroTitle {
     font-size: 40px;
   }
-  
   
   .heroOverlay::after {
     content: "";
@@ -55,58 +47,4 @@
     border-top: 450px solid white; 
     transform: rotate(90deg);
   }
-/* 
-.steeringWheel {
-  background-image: url(../../components/Images/rul.png);
-  background-size: cover;
-  width: 70px;
-  height: 70px;
-  margin-right: 30px; 
-  position: absolute;
-  right: 10px;
-  top: 300px;
-  z-index: 1;
-}
-.putMe{
-  display: flex;
-  flex-direction: column; 
-  position: absolute;
-  font-size: 12px;
-  font-weight: 600;
-  right: -12px;
-  align-items: center;
-  color: blue;
-}
-.signal {
-  display: flex;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: #800000;
-  position: absolute;
-  top: 40%;
-  left: 36%;
-  transform: translate(-50%, -50%);
-  border: 1px solid wheat;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
-  animation: pulse 1s infinite alternate, brighten 1s infinite alternate;
-}
- 
- @keyframes pulse {
-  from {
-    transform: scale(1); 
-  }
-  to {
-    transform: scale(1.1); 
-  }
-}
-@keyframes brighten {
-  from {
-    filter: brightness(1); 
-  }
-  to {
-    filter: brightness(1.5); 
-  }
-} */
 }
