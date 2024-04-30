@@ -1,9 +1,13 @@
 .formSelect{
     height: 40px;
+    padding: 10px;
+  box-sizing: border-box;
   }
 @media screen and (max-width: 643px){
   .formSelect{
     height: 40px;
+    padding: 10px;
+  box-sizing: border-box;
   }
   .formSearch {
   display: flex;
