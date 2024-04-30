@@ -10,6 +10,17 @@
     transition: border-color 0.3s;
   }
 @media screen and (max-width: 643px){
+  .formSearch select,
+  .formSearch input[type="text"] {
+    
+    margin: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
   .formSearch {
   display: flex;
   flex-direction: column;
