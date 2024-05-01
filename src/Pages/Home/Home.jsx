@@ -7,7 +7,9 @@ import { useTranslation } from 'react-i18next';
 import {W3} from '../../w3form/w3.js';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useMediaQuery } from 'react-responsive';
 const Home = () => {
+  const isMobileDevice = useMediaQuery({ query: '(max-width: 767px)' });
   const [audio] = useState(new Audio(hornSound));
   const handleButtonClick = () => {
     audio.play();
@@ -94,7 +96,7 @@ const Home = () => {
   </div>
         </div>
       </div>
-      <ToastContainer position="top-right" autoClose={5000} /> 
+      <ToastContainer position={isMobileDevice ? "bottom-right" : "top-right"} autoClose={5000} />
       </div>
     </div>
   );
