@@ -13,37 +13,15 @@
   }
   .heart {
     position: absolute;
-    top: 10px; /* Расстояние от верхнего края */
+    top: 12px; /* Расстояние от верхнего края */
     right: 10px; /* Расстояние от правого края */
     z-index: 3; /* Поднимаем сердечко над изображением */
     cursor: pointer; /* Делаем курсор указателем при наведении */
     background-color: transparent; /* Установка прозрачного фона для квадратика */
     border: none; 
   }
-  .heart img {
-    width: 20px; /* Размер сердечка */
-    height: auto; /* Автоматическая высота */
-  }
-  .heartIcon {
-    fill: #ffffff; /* Установка белого цвета для сердечка по умолчанию */
-  }
-  .heartIconUnder {
-    color: gray;
-    position: absolute;
-    top: 11px; 
-    right: 15px; 
-    z-index: 1; /* Поднимаем сердечко над изображением */
-    cursor: pointer; /* Делаем курсор указателем при наведении */
-    background-color: transparent; /* Установка прозрачного фона для квадратика */
-    border: none;
-  }
-  .heartIconUnder img {
-    width: 40px; /* Размер сердечка */
-    height: auto; /* Автоматическая высота */
-  }
-  .heartIcon.favorite {
-    fill: #ff0000; /* Установка красного цвета для сердечка, когда он в избранном состоянии */
-  }
+  
+  
   
   .buttonModal {
     width: 100%;

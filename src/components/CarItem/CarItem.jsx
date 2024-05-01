@@ -65,13 +65,8 @@ const CarItem = ({ car, openModal }) => {
     <div className={css.carItem}>
       <img className={css.imageItem} src={car.img} alt={`${car.make} ${car.model}`} />
       <button onClick={handleClick} onTouchStart={handleTouchStart} className={css.heart}>
-  <span>
   <HeartIcon fill={isFavorite ? '#ff0000' : '#ffffff'} />
-  </span>
-</button>
-      {/* <span className={css.heartIconUnder}>
-          &#10084;
-        </span> */}
+     </button>
       <div className={css.allDescriptionCarContents}>
         <div className={css.wraperTitleItemContentPrice}>
           <div><h2 className={css.titleItemContent}>{car.make} <span>{car.model}</span>, {car.year}</h2></div>
