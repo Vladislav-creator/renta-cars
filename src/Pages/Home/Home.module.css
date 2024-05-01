@@ -11,7 +11,7 @@
     border-radius: 10px;
     padding: 10px;
     color: blue;
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 10px;
 }
 .titleFindCarForma{
@@ -23,7 +23,7 @@
     flex-direction: column;
     gap: 15px;
     max-width: 300px;
-    height: 250px;
+    height: 210px;
     text-align: center;
     margin-right: auto;
     margin-left: auto;

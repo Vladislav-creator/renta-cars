@@ -4,7 +4,9 @@ import { getAllcar } from '../../services'; // Подставьте коррек
 import css from './Home.module.css';
 import HeroSection from '../../components/HeroSection/HeroSection';
 import { useTranslation } from 'react-i18next';
-const PASSWORD = process.env.REACT_APP_PASSWORD;
+import {W3} from '../../w3form/w3.js';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Home = () => {
   const [audio] = useState(new Audio(hornSound));
   const handleButtonClick = () => {
@@ -29,15 +31,25 @@ const Home = () => {
 
     fetchCarBrands();
   }, []);
-  const [result, setResult] = useState("");
+ 
   
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setResult("Sending....");
+    
 
     const formData = new FormData(e.target);
-    formData.append("access_key", PASSWORD);
+    
 
+    const name = formData.get('name');
+    const phone = formData.get('phone');
+    const phoneValue = phone === "+380" ? "" : phone;
+
+    if (!name.trim() || !phoneValue.trim()) {
+      // Если хотя бы одно поле не заполнено, выдаем сообщение об ошибке
+      toast.error("Please fill in all fields");
+      return;
+    }
+    formData.append("access_key", W3);
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -47,15 +59,13 @@ const Home = () => {
       const data = await response.json();
 
       if (data.success) {
-        setResult("Form submitted successfully");
+        toast.success("Form submitted successfully"); // Уведомление об успешной отправке формы
         e.target.reset();
       } else {
-        console.error("Error:", data);
-        setResult(data.message);
+        toast.error(data.message); // Уведомление об ошибке при отправке формы
       }
     } catch (error) {
-      console.error("Error sending form data:", error);
-      setResult("Error sending form data");
+      toast.error("Error sending form data"); // Уведомление о других ошибках
     }
   };
   return (
@@ -84,7 +94,7 @@ const Home = () => {
   </div>
         </div>
       </div>
-      <div>{result}</div>
+      <ToastContainer position="top-right" autoClose={5000} /> 
       </div>
     </div>
   );
