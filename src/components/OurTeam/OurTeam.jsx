@@ -6,8 +6,8 @@ const OurTeam = () => {
 <section>
 <div className={css.container}>
   <h2 className={css.sectionTitle}>{t('Team')}</h2>
-  <ul class={css.sectionList}>
-    <li class={css.employeesListItem}>
+  <ul className={css.sectionList}>
+    <li className={css.employeesListItem}>
       <img
         srcSet={`
         ${require('./images/our_team/TeamCard1a.jpg')} 1x,
@@ -22,7 +22,7 @@ const OurTeam = () => {
         <p>{t('Director')}</p>
         </div>
         </li>
-    <li class={css.employeesListItem}>
+    <li className={css.employeesListItem}>
       <img
        srcSet={`
        ${require('./images/our_team/TeamCard2a.jpg')} 1x,
@@ -37,7 +37,7 @@ const OurTeam = () => {
         <p>{t('Account')}</p>
         </div>
         </li> 
-    <li class={css.employeesListItem}>
+    <li className={css.employeesListItem}>
       <img
       srcSet={`
       ${require('./images/our_team/TeamCard3a.jpg')} 1x,
@@ -52,7 +52,7 @@ const OurTeam = () => {
         <p>{t('Accountant')}</p>
         </div>
     </li>
-    <li class={css.employeesListItem}>
+    <li className={css.employeesListItem}>
       <img
       srcSet={`
       ${require('./images/our_team/TeamCard4a.jpg')} 1x,
