@@ -19,7 +19,7 @@ const FavouriteCar = () => {
 
   return (
     <div className="container">
-      <h1 className="car-title">{t('Favorite')}</h1>
+      <h1 className="title">{t('Favorite')}</h1>
       <div className={css.imageGrid}>
         {loading ? (
           <Loader /> // Показываем Loader только во время фактической загрузки данных

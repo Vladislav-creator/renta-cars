@@ -1,9 +1,11 @@
-import css from './OurTeam.module.css'
+import css from './OurTeam.module.css';
+import { useTranslation } from 'react-i18next';
 const OurTeam = () => {
+  const { t } = useTranslation();
   return (
 <section>
 <div className={css.container}>
-  <h2 className={css.sectionTitle}>Our Team</h2>
+  <h2 className={css.sectionTitle}>{t('Team')}</h2>
   <ul class={css.sectionList}>
     <li class={css.employeesListItem}>
       <img
@@ -11,13 +13,13 @@ const OurTeam = () => {
         ${require('./images/our_team/TeamCard1a.jpg')} 1x,
         ${require('./images/our_team/TeamCard1a@2x.jpg')} 2x
       `}
-        alt="Mark Guerrero - Product Designer"
+        alt={t('MarkForAlt')} 
         width="264"
         height="260"
       />
-      <div class="employees-text-content">
-        <h3 class="subtitle-our_team">Mark Guerrero</h3>
-        <p class="text-description">Product Designer</p>
+      <div>
+        <h3>{t('Mark')}</h3>
+        <p>{t('Director')}</p>
         </div>
         </li>
     <li class={css.employeesListItem}>
@@ -26,13 +28,13 @@ const OurTeam = () => {
        ${require('./images/our_team/TeamCard2a.jpg')} 1x,
        ${require('./images/our_team/TeamCard2a@2x.jpg')} 2x
      `}
-        alt="Tom Ford - Frontend Developer"
+        alt={t('IvanForAlt')}
         width="264"
         height="260"
       />
-      <div class="employees-text-content">
-        <h3 class="subtitle-our_team">Tom Ford</h3>
-        <p class="text-description">Frontend Developer</p>
+      <div>
+        <h3>{t('Ivan')}</h3>
+        <p>{t('Account')}</p>
         </div>
         </li> 
     <li class={css.employeesListItem}>
@@ -41,13 +43,13 @@ const OurTeam = () => {
       ${require('./images/our_team/TeamCard3a.jpg')} 1x,
       ${require('./images/our_team/TeamCard3a@2x.jpg')} 2x
     `}
-        alt="Camila Garsia - Marketing"
+        alt={t('CamilaForAlt')}
         width="264"
         height="260"
       />
-      <div class="employees-text-content">
-        <h3 class="subtitle-our_team">Camila Garcia</h3>
-        <p class="text-description">Marketing</p>
+      <div>
+        <h3>{t('Camila')}</h3>
+        <p>{t('Accountant')}</p>
         </div>
     </li>
     <li class={css.employeesListItem}>
@@ -56,13 +58,13 @@ const OurTeam = () => {
       ${require('./images/our_team/TeamCard4a.jpg')} 1x,
       ${require('./images/our_team/TeamCard4a@2x.jpg')} 2x
     `}
-        alt="Daniel Wilson - UI Designer"
+        alt={t('VadimForAlt')}
         width="264"
         height="260"
       />
-      <div class="employees-text-content">
-        <h3 class="subtitle-our_team">Daniel Wilson</h3>
-        <p class="text-description">UI Designer</p>
+      <div>
+        <h3>{t('Vadim')}</h3>
+        <p>{t('Lawyer')}</p>
         </div>
     </li>
   </ul>

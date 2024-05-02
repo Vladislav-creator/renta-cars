@@ -10,7 +10,7 @@ const Contacts = () => {
   const { t } = useTranslation();
     return (
         <div className={css.container}>
-        <h1 className="car-title">{t('titleContacts')}</h1>
+        <h1 className="title">{t('titleContacts')}</h1>
         <div className={css.wrapperContacts}>
           
         <div className={css.contacts}>  

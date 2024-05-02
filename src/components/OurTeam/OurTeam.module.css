@@ -4,8 +4,12 @@
 }
 .sectionTitle {
     margin-bottom: 30px ;
-    font-size: 30px;
+    font-size: 35px;
     text-align: center;
+    color: blueviolet;
+    font-family: "Trirong", serif;
+  font-weight: 300;
+  font-style: normal;
 }
 .sectionList {
     display: flex;
@@ -13,6 +17,5 @@
     margin-bottom: 20px; 
     justify-content: center; 
   align-items: center; 
-  gap: 48px;
+  gap: 45px;
 } 
- 

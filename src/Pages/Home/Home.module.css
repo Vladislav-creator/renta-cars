@@ -3,6 +3,7 @@
 }
 .container{
     padding: 10px;
+    background-color: white;
 }
 .indentedParagraph {
     text-indent: 20px;

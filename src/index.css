@@ -95,9 +95,9 @@ body {
 body.modal-open {
   overflow: hidden; /* Запретить прокрутку */
 }
-.car-title {
+.title {
   text-align: center; 
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-family: "Trirong", serif;
   font-weight: 300;
   font-style: normal;

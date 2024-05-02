@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n'; // ваш объект i18n
+import { useTranslation } from 'react-i18next';
 import { Loader } from './components/Loader/Loader';
 import { Suspense, lazy } from 'react';
 import css from './App.module.css';
@@ -17,7 +18,7 @@ const Contacts = lazy(() => import('./Pages/Contacts/Contacts.jsx'));
 const App = () => {
   const phoneNumber = '+380978556455';
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+  const { t } = useTranslation();
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -65,19 +66,19 @@ const App = () => {
   </div>
       </div>
         <NavLink className="header-link" to="/">
-          Home
+        {t('Home')}
         </NavLink>
         <NavLink className="header-link" to="/catalog">
-        Catalog 
+        {t('Catalog')} 
         </NavLink>
         <NavLink className="header-link" to="/favorites">
-        Favourites 
+        {t('Favourites')}
         </NavLink>
         <NavLink className="header-link" to="/about">
-        About 
+        {t('AboutUs')} 
         </NavLink>
         <NavLink className="header-link" to="/contacts">
-        Contacts 
+        {t('Contacts')} 
         </NavLink>
         <div className={css.wraperRightHeader}>
           <div className={css.wraperContactIcons}>

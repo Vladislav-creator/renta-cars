@@ -5,8 +5,8 @@ import OurTeam from '../../components/OurTeam/OurTeam.jsx';
 const About = () => {
     const { t } = useTranslation(); 
     return (
-        <div className="container">
-        <h1 className="car-title">{t('titleAbout')}</h1>
+        <div className={css.container}>
+        <h1 className="title">{t('titleAbout')}</h1>
         <div className={css.wrapperAbout}>
         <div className={css.about}>  <p className={css.indentedParagraph}>{t('About')} </p> </div>
         <div className={css.photo}>
