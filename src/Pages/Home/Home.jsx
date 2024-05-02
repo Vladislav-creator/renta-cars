@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import hornSound from '../../Sound/new_message_tone-1.mp3';
-import { getAllcar } from '../../services'; // Подставьте корректный путь к сервису API
+import { getAllcar } from '../../services'; 
 import css from './Home.module.css';
 import HeroSection from '../../components/HeroSection/HeroSection';
 import { useTranslation } from 'react-i18next';

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n'; // ваш объект i18n
 import { Loader } from './components/Loader/Loader';
@@ -21,6 +21,14 @@ const App = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  useEffect(() => {
+    const body = document.body;
+    if (isMenuOpen) {
+      body.style.overflow = 'hidden';
+    } else {
+      body.style.overflow = 'auto';
+    }
+  }, [isMenuOpen]);
   return (
     
     <I18nextProvider i18n={i18n}>

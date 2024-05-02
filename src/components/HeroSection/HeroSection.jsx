@@ -6,11 +6,11 @@ const HeroSection = () => {
   
 
   return (
-    <div className={css.heroSection}>
+    <section className={css.heroSection}>
       <div className={css.heroOverlay}>
         <h1 className={css.heroTitle}>{t('Welcome')}<span className={css.rentaYellow}>{t('RENTA')}</span>{t('CARS')}</h1>
     </div>
-    </div>
+    </section>
   );
 }
 
