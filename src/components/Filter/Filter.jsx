@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import css from './Filter.module.css';
-const Filter = ({ onFilter, onReset, carMakes, rentalPrices, allCars }) => {
+const Filter = ({ onFilter, onReset, carMakes, rentalPrices }) => {
   const [make, setMake] = useState('');
   const [price, setPrice] = useState('');
   const [mileageFrom, setMileageFrom] = useState('');

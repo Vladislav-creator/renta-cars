@@ -1,6 +1,7 @@
 import css from './About.module.css';
 import Photo1 from '../../components/Images/rent-car1.jpg';
 import { useTranslation } from 'react-i18next';
+import OurTeam from '../../components/OurTeam/OurTeam.jsx';
 const About = () => {
     const { t } = useTranslation(); 
     return (
@@ -12,6 +13,8 @@ const About = () => {
          <img src={Photo1} alt='rent-car1' width='100%'/>
          </div>
         </div>
+        
+        <OurTeam/>
         </div>
     )
 }
