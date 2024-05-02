@@ -24,9 +24,9 @@ const App = () => {
   useEffect(() => {
     const body = document.body;
     if (isMenuOpen) {
-      body.style.overflow = 'hidden';
+      body.classList.add('no-scroll');
     } else {
-      body.style.overflow = 'auto';
+      body.classList.remove('no-scroll');
     }
   }, [isMenuOpen]);
   return (
