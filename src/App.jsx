@@ -23,11 +23,24 @@ const App = () => {
   };
   useEffect(() => {
     const body = document.body;
+  
+    const handleTouchMove = (e) => {
+      if (isMenuOpen) {
+        e.preventDefault();
+      }
+    };
+  
     if (isMenuOpen) {
       body.classList.add('no-scroll');
+      body.addEventListener('touchmove', handleTouchMove, { passive: false });
     } else {
       body.classList.remove('no-scroll');
+      body.removeEventListener('touchmove', handleTouchMove);
     }
+  
+    return () => {
+      body.removeEventListener('touchmove', handleTouchMove);
+    };
   }, [isMenuOpen]);
   return (
     
