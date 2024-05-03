@@ -7,6 +7,7 @@
   background-color: rgba(128, 128, 128, 0.1);
   z-index: 9998; 
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch; 
  } 
  
  .modalContent {
@@ -21,7 +22,7 @@
   z-index: 10000; 
   max-width: 100%; 
   overflow-y: auto; 
-  -webkit-overflow-scrolling: touch;  
+   
 } 
  
 .closeButton {
