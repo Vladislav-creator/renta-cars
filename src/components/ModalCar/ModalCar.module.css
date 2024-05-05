@@ -108,11 +108,7 @@
   
   height: auto;
 }
-@media screen and (min-width: 950px)  {
-.imageCar {
-  width: 800px;
-}
-}
+
 .titleContent{
 font-weight: 500;
 font-size: 17px;
