@@ -35,5 +35,12 @@
     "Catalog": "Каталог",
     "Favourites": "Любимые",
     "AboutUs": "Про нас",
-    "Contacts": "Контакты"
+    "Contacts": "Контакты",
+    "Name_contains_less_than_3_letters": "Имя содержит меньше 3 букв",
+    "The_name_must_not_contain_numbers": "Имя не должно содержать цифры",
+    "The_phone_number_must_contain_only_numbers": "Номер телефона должен содержать только цифры",
+    "Please_fill_in_all_fields": "Пожалуйста, заполните все поля",
+    "Form_submitted_successfully": "Форма успешно отправлена",
+    "Error_sending_form_data": "Ошибка отправки данных формы",
+    "Send": "Отправить"
   }

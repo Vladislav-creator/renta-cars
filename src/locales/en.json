@@ -35,5 +35,12 @@
     "Catalog": "Catalog",
     "Favourites": "Favourites",
     "AboutUs": "About",
-    "Contacts": "Contacts"
+    "Contacts": "Contacts",
+    "Name_contains_less_than_3_letters": "Name contains less than 3 letters",
+    "The_name_must_not_contain_numbers": "The name must not contain numbers",
+    "The_phone_number_must_contain_only_numbers": "The phone number must contain only numbers",
+    "Please_fill_in_all_fields": "Please fill in all fields",
+    "Form_submitted_successfully": "Form submitted successfully",
+    "Error_sending_form_data": "Error sending form data",
+    "Send": "Send"
   }

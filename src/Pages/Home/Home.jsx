@@ -46,9 +46,27 @@ const Home = () => {
     const phone = formData.get('phone');
     const phoneValue = phone === "+380" ? "" : phone;
 
+    let containsDigits = /\d/.test(name);
+    let phoneWithoutPlus = phone.replace(/\+/g, '');
+    let containsNonDigits = /\D/.test(phoneWithoutPlus);
+    let nameLength = name.length;
+    
+
+    if (nameLength < 3) {
+      toast.error(<>{t('Name_contains_less_than_3_letters')}</>);
+      return;
+    }
+    if (containsDigits) {
+      toast.error(<>{t('The_name_must_not_contain_numbers')}</>);
+      return;
+  }
+    if (containsNonDigits) {
+      toast.error(<>{t('The_phone_number_must_contain_only_numbers')}</>);
+      return;
+  }
     if (!name.trim() || !phoneValue.trim()) {
       // Если хотя бы одно поле не заполнено, выдаем сообщение об ошибке
-      toast.error("Please fill in all fields");
+      toast.error(<>{t('Please_fill_in_all_fields')}</>);
       return;
     }
     formData.append("access_key", W3);
@@ -61,13 +79,13 @@ const Home = () => {
       const data = await response.json();
 
       if (data.success) {
-        toast.success("Form submitted successfully"); // Уведомление об успешной отправке формы
+        toast.success(<>{t('Form_submitted_successfully')}</>); // Уведомление об успешной отправке формы
         e.target.reset();
       } else {
         toast.error(data.message); // Уведомление об ошибке при отправке формы
       }
     } catch (error) {
-      toast.error("Error sending form data"); // Уведомление о других ошибках
+      toast.error(<>{t('Error_sending_form_data')}</>); // Уведомление о других ошибках
     }
   };
   return (
@@ -83,7 +101,7 @@ const Home = () => {
           <form onSubmit={handleSubmit} className={css.forma}>
             <input type="text" name="name" placeholder="Input name" className={css.formInput} />
             <input type="text" name="phone" placeholder="Input phone" className={css.formInput} defaultValue="+380" />
-            <button type="submit" className={css.buttonSend}>Send</button>
+            <button type="submit" className={css.buttonSend}>{t('Send')}</button>
           </form>
           <div className={css.steeringWheel}>
           <button className={css.signal} onClick={handleButtonClick}></button>

@@ -35,5 +35,12 @@
     "Catalog": "Каталог",
     "Favourites": "Улюблені",
     "AboutUs": "Про нас",
-    "Contacts": "Контакти"
+    "Contacts": "Контакти",
+    "Name_contains_less_than_3_letters": "Ім'я містить менше 3 букв",
+    "The_name_must_not_contain_numbers": "Ім'я не повинно містити цифри",
+    "The_phone_number_must_contain_only_numbers": "Номер телефону повинен містити лише цифри",
+    "Please_fill_in_all_fields": "Будь ласка, заповніть усі поля",
+    "Form_submitted_successfully": "Форма успішно надіслана",
+    "Error_sending_form_data": "Помилка надсилання даних форми",
+    "Send": "Відправити"
   }
