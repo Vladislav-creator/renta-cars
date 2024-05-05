@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { I18nextProvider } from 'react-i18next';
-import i18n from './i18n'; // ваш объект i18n
+import i18n from './i18n'; 
 import { useTranslation } from 'react-i18next';
 import { Loader } from './components/Loader/Loader';
 import { Suspense, lazy } from 'react';
@@ -9,6 +9,8 @@ import { NavLink, Navigate, Route, Routes } from 'react-router-dom';
 import LanguageSelector from './components/LanguageSelector/LanguageSelector.jsx';
 import ContactIcons from './components/ContactIcons/ContactIcons.jsx';
 import MenuModal from './components/MenuModal/MenuModal.jsx';
+import IconRentaCars from './components/IconsRentaCars/IconRentaCars.jsx';
+
 const CatalogCar = lazy(() => import('./Pages/CatalogCar/CatalogCar.jsx'));
 const Home = lazy(() => import('./Pages/Home/Home.jsx'));
 const FavouriteCar = lazy(() => import('./Pages/FavouriteCar/FavouriteCar.jsx'));
@@ -48,23 +50,9 @@ const App = () => {
     <I18nextProvider i18n={i18n}>
     <div>
       <header className={css.header}>
-        <div className={css.iconContainer}>
-      <div className={css.iconRent}></div>
-      <div className={css.cars}>
-    <p>C</p>
-    <p>A</p>
-    <p>R</p>
-    <p>S</p>
-    <p></p>
-  </div>
-  <div className={css.renta}>
-    <p>R</p>
-    <p>E</p>
-    <p>N</p>
-    <p>T</p>
-    <p>A</p>
-  </div>
-      </div>
+      <NavLink className={css.iconRentaCars} to="/">
+      <IconRentaCars />
+      </NavLink>
         <NavLink className="header-link" to="/">
         {t('Home')}
         </NavLink>
