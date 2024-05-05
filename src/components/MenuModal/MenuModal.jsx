@@ -1,8 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import css from './MenuModal.module.css'; // Подключите файл стилей для меню
-
+import { useTranslation } from 'react-i18next';
 const MenuModal = ( { onCloseMenu }) => {
+  const { t } = useTranslation();
     const handleClose = () => {
         onCloseMenu();
       };
@@ -20,19 +21,19 @@ const MenuModal = ( { onCloseMenu }) => {
         </button>
       <div className={css.menuItems}>
         <NavLink className={css.menuLink} to="/" onClick={onCloseMenu}>
-          Home
+        {t('Home')}
         </NavLink>
         <NavLink className={css.menuLink} to="/catalog" onClick={onCloseMenu}>
-          Catalog
+        {t('Catalog')}
         </NavLink>
         <NavLink className={css.menuLink} to="/favorites" onClick={onCloseMenu}>
-          Favourites
+        {t('Favourites')} 
         </NavLink>
         <NavLink className={css.menuLink} to="/about" onClick={onCloseMenu}>
-          About
+        {t('AboutUs')}
         </NavLink>
         <NavLink className={css.menuLink} to="/contacts" onClick={onCloseMenu}>
-          Contacts
+        {t('Contacts')}
         </NavLink>
       </div>
     </div>
