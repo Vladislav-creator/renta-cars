@@ -6,3 +6,8 @@
   justify-content: center; /* Центрируем содержимое по горизонтали */
 align-items: center; 
   }
+  .noImg{
+    margin-bottom: 20px;
+    color: blueviolet;
+    font-size: 20px;
+  }

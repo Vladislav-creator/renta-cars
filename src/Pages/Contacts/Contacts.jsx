@@ -1,5 +1,5 @@
  import css from './Contacts.module.css';
- import Photo1 from '../../components/Images/office-rent-car1.jpg';
+ import Photo1 from '../../components/Images/office-rent-car1-optim.jpg';
 import MapWithMarker from '../../components/MapWithMarker/MapWithMarker.jsx';
 import AddressIcon from '../../components/Images/address.svg';
 import PhoneIcon from '../../components/Images/phone.svg';
@@ -37,7 +37,7 @@ const Contacts = () => {
   </div>
 
         <div className={css.photo}>
-         <img src={Photo1} alt='rent-car1' width='100%'/>
+         <img src={Photo1} alt="renta car's" width='100%'/>
          </div>
 
          <div className={css.map}>

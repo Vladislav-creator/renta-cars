@@ -3,7 +3,7 @@
     height: 100vh;
     display: flex;
     justify-content: center;
-    background-image: url('../Images/car.jpg');
+    background-image: url('../Images/car-optim.jpg');
     background-size: cover;
     background-position: center;
   }

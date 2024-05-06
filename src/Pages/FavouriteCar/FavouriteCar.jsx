@@ -5,6 +5,7 @@ import CarItem from '../../components/CarItem/CarItem.jsx';
 import { Loader } from '../../components/Loader/Loader'; // Импортируем компонент Loader
 import css from './FavouriteCar.module.css';
 import { useTranslation } from 'react-i18next';
+import Photo from '../../components/Images/car-no-search.jpg';
 const FavouriteCar = () => {
   const favoriteArray = useSelector(selectFavorites);
   const [loading, setLoading] = useState(true); // Начальное состояние загрузки - true
@@ -28,7 +29,10 @@ const FavouriteCar = () => {
             <CarItem key={car.id} car={car} />
           ))
         ) : (
-          <p>No favorite cars yet.</p>
+          <>
+          <p className={css.noImg}>{t('No_favorite_cars_yet')}</p>
+          <img src={Photo} alt="renta car's" width='100%'/>
+          </>
         )}
       </div>
     </div>
