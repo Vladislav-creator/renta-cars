@@ -7,8 +7,10 @@ import { addFavoriteCar, removeFavoriteCar } from '../../redux/FavouriteCars/act
 import css from './CarItem.module.css';
 import { selectFavorites } from '../../redux/FavouriteCars/selectors';
 import withModal from '../ModalCar/withModal.js';
+import { useTranslation } from 'react-i18next';
 
 const CarItem = ({ car, openModal }) => {
+  const { t } = useTranslation();
   const [isFavorite, setIsFavorite] = useState(false);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
   const dispatch = useDispatch();
@@ -78,7 +80,7 @@ const CarItem = ({ car, openModal }) => {
           </div>
           </div>
       <button className={css.buttonModal} onClick={() => openModal(car)}>
-        Learn more
+      {t('Learn_more')} 
       </button>
     </div>
   );

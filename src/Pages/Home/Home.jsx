@@ -51,7 +51,11 @@ const Home = () => {
     let containsNonDigits = /\D/.test(phoneWithoutPlus);
     let nameLength = name.length;
     
-
+    if (!name.trim() || !phoneValue.trim()) {
+      // Если хотя бы одно поле не заполнено, выдаем сообщение об ошибке
+      toast.error(<>{t('Please_fill_in_all_fields')}</>);
+      return;
+    }
     if (nameLength < 3) {
       toast.error(<>{t('Name_contains_less_than_3_letters')}</>);
       return;
@@ -64,11 +68,7 @@ const Home = () => {
       toast.error(<>{t('The_phone_number_must_contain_only_numbers')}</>);
       return;
   }
-    if (!name.trim() || !phoneValue.trim()) {
-      // Если хотя бы одно поле не заполнено, выдаем сообщение об ошибке
-      toast.error(<>{t('Please_fill_in_all_fields')}</>);
-      return;
-    }
+    
     formData.append("access_key", W3);
     try {
       const response = await fetch("https://api.web3forms.com/submit", {

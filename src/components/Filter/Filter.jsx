@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import css from './Filter.module.css';
+import { useTranslation } from 'react-i18next';
 const Filter = ({ onFilter, onReset, carMakes, rentalPrices }) => {
+  const { t } = useTranslation();
   const [make, setMake] = useState('');
   const [price, setPrice] = useState('');
   const [mileageFrom, setMileageFrom] = useState('');
@@ -43,13 +45,13 @@ const Filter = ({ onFilter, onReset, carMakes, rentalPrices }) => {
   return (
     <form className={css.formSearch} onSubmit={handleSubmit}>
       <select className={css.formSelect} name="make" value={make} onChange={handleInputChange}>
-        <option value="">Car Brand</option>
+      <option value="">{t('Brand')}</option>
         {carMakes.map(make => (
           <option key={make} value={make}>{make}</option>
         ))}
       </select>
       <select className={css.formSelect} name="price" value={price} onChange={handleInputChange}>
-        <option value="">Price</option>
+        <option value="">{t('Price')}</option>
         {rentalPrices.map(price => (
           <option key={price} value={price}>{price}</option>
         ))}
@@ -57,19 +59,19 @@ const Filter = ({ onFilter, onReset, carMakes, rentalPrices }) => {
       <input 
         type="text" 
         name="mileageFrom" 
-        placeholder="Mileage From" 
+        placeholder={t('Mileage_From')} 
         value={mileageFrom} 
         onChange={handleInputChange} 
       />
       <input 
         type="text" 
         name="mileageTo" 
-        placeholder="Mileage To" 
+        placeholder={t('Mileage_To')} 
         value={mileageTo} 
         onChange={handleInputChange} 
       />
-      <button type="submit">Search</button>
-      <button type="button" onClick={handleReset}>Reset</button>
+      <button type="submit">{t('Search')}</button>
+      <button type="button" onClick={handleReset}>{t('Reset')}</button>
     </form>
   );
 };

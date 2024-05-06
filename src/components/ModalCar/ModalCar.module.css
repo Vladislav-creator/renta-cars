@@ -1,29 +1,4 @@
- /* .modalOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(128, 128, 128, 0.1);
-  z-index: 9998; 
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch; 
- } 
  
- .modalContent {
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
-  z-index: 10000; 
-  max-width: 100%; 
-  overflow-y: auto; 
-   
-}  */
 .modalOverlay {
   position: fixed;
   top: 0;
@@ -61,7 +36,7 @@
   flex-grow: 0;
   background: #fff;
   padding: 40px;
-  max-width: 200vh;
+  max-width: 150vh;
   overflow: visible;
   transition: transform 0.2s ease 0s, opacity 0.2s ease 0s;
   transform: scale(0.9);
