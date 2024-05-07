@@ -1,4 +1,4 @@
-# Renta Car's  многостраничное адаптивное приложение для компании по сдаче в аренду авто.
+# "Renta Car's" -  многостраничное адаптивное приложение для компании по сдаче в аренду авто.
  Структура приложения:
  Хедер(шапка сайта) для связки страниц приложения. При мобильной версии есть кнопка "menu" для включения модального окна со ссылками на страницы сайта, так же сама иконка-логотип компании является ссылкой на главную страницу. Для планшетной и десктопной версий сайта в хедере предусмотрены кнопки-ссылки для каждой страницы. Для переключения перевода контента на укр. язык, русский и английский предусмотрена специальная кнопка.
  1. Страница "Главная" (ознакомительно-представительная), так же есть форма отправки клиентом своих данных: телефона и имени.
@@ -29,7 +29,7 @@
 * проблемой было сделать адекватное универсальное для разных типов устройств модальное окно для вывода детальной информации про авто, когда высота модального окна превышает высоту видимой части экрана, для решения этого момента пришлось искать дополнительную информацию
 
 ### Inglish translate
-# Multi-page adapted application # Renta Car for a car rental company.
+# Multi-page adapted application "Renta Car's" - for a car rental company.
  Application structure:
  Header (site header) for linking application pages. The mobile version has a “menu” button to enable a modal window with links on the site page, and the company logo icon itself is a link to the main page. For the tablet and desktop versions of the site, the header provides link buttons for each page. To switch the translation of content into Ukrainian. language, Russian and English there is a special button.
  1. The “Home” page (introductory and representative), there is also a form for the client to send his data: phone number and name.
