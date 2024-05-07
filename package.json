@@ -9,7 +9,6 @@
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.8",
-    "dotenv": "^16.4.5",
     "i18next": "^23.11.2",
     "i18next-browser-languagedetector": "^7.2.1",
     "memfs": "^4.8.2",

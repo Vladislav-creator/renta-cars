@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { selectFavorites } from '../../redux/FavouriteCars/selectors.jsx';
 import CarItem from '../../components/CarItem/CarItem.jsx';
-import { Loader } from '../../components/Loader/Loader'; // Импортируем компонент Loader
+import { Loader } from '../../components/Loader/Loader'; 
 import css from './FavouriteCar.module.css';
 import { useTranslation } from 'react-i18next';
 import Photo from '../../components/Images/car-no-search.jpg';
@@ -29,10 +29,10 @@ const FavouriteCar = () => {
             <CarItem key={car.id} car={car} />
           ))
         ) : (
-          <>
-          <p className={css.noImg}>{t('No_favorite_cars_yet')}</p>
-          <img src={Photo} alt="renta car's" width='100%'/>
-          </>
+          <div className={css.noImgWrapper}> 
+          <h2 className={css.noImg}>{t('No_favorite_cars_yet')}</h2>
+          <img className={css.ImgCarPicture}src={Photo} alt="renta car's" />
+          </div>
         )}
       </div>
     </div>
