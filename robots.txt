@@ -1,3 +1,6 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Disallow: /node_modules/
+Disallow: /public/
+Disallow: /package.json
+Disallow: /README.md
