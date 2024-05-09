@@ -32,7 +32,7 @@ const ContactIcons = ({ phoneNumber }) => {
         <button onClick={handleCall} className={css.numberPhone}>{phoneNumber}</button>
       </div>
       {/* Используем медиа-запрос для скрытия иконок ниже 900px */}
-      <div className={window.innerWidth < 900 ? css.hiddenIcons : ''}>
+      <div className={window.innerWidth < 1104 ? css.hiddenIcons : ''}>
         <FaViber onClick={() => handleIconClick('viber')} className={css.icon + ' ' + css.viberIcon} />
         <FaTelegram onClick={() => handleIconClick('telegram')} className={css.icon + ' ' + css.telegramIcon} />
         <FaWhatsapp onClick={() => handleIconClick('whatsapp')} className={css.icon + ' ' + css.whatsappIcon} />

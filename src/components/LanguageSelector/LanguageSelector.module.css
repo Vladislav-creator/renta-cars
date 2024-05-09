@@ -1,35 +1,6 @@
-
- .languageSelector {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .languageSelector button {
-    background: none;
-    border: none;
-    cursor: pointer;
-   
-    
-  }
-  
-  .languageSelector img {
-    width: 30px;
-    height: auto;
-  }
-  .languageSelector .activ img {
-    width: 40px;
-    height: auto;
-  }
-  .select {
-    width: 40px;
-    height: 30px;
-    border-radius: 5px;
-    border-color: 1px solid blue;
-    outline: none;
-  }
+#rfs-btn {
+  padding: 0;
+}
 
   
- 
-   
-   
+  
