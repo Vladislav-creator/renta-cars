@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/renta-cars/static/css/main.282d9837.css",
-    "main.js": "/renta-cars/static/js/main.d4e3d40b.js",
+    "main.css": "/renta-cars/static/css/main.8e2e9acb.css",
+    "main.js": "/renta-cars/static/js/main.315cdc03.js",
     "static/css/101.d0068e26.chunk.css": "/renta-cars/static/css/101.d0068e26.chunk.css",
     "static/js/101.77f59464.chunk.js": "/renta-cars/static/js/101.77f59464.chunk.js",
     "static/css/368.6084686c.chunk.css": "/renta-cars/static/css/368.6084686c.chunk.css",
@@ -32,8 +32,8 @@
     "static/media/phone.svg": "/renta-cars/static/media/phone.5347e727789e087e76fbbbd053a44287.svg",
     "static/media/address.svg": "/renta-cars/static/media/address.82c6fbaba5ef91a0ef5761aedde1fd87.svg",
     "static/media/email.svg": "/renta-cars/static/media/email.2f10a512702bfa1bfd8530645dddd4f2.svg",
-    "main.282d9837.css.map": "/renta-cars/static/css/main.282d9837.css.map",
-    "main.d4e3d40b.js.map": "/renta-cars/static/js/main.d4e3d40b.js.map",
+    "main.8e2e9acb.css.map": "/renta-cars/static/css/main.8e2e9acb.css.map",
+    "main.315cdc03.js.map": "/renta-cars/static/js/main.315cdc03.js.map",
     "101.d0068e26.chunk.css.map": "/renta-cars/static/css/101.d0068e26.chunk.css.map",
     "101.77f59464.chunk.js.map": "/renta-cars/static/js/101.77f59464.chunk.js.map",
     "368.6084686c.chunk.css.map": "/renta-cars/static/css/368.6084686c.chunk.css.map",
@@ -48,7 +48,7 @@
     "139.551f8f2a.chunk.js.map": "/renta-cars/static/js/139.551f8f2a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.282d9837.css",
-    "static/js/main.d4e3d40b.js"
+    "static/css/main.8e2e9acb.css",
+    "static/js/main.315cdc03.js"
   ]
 }
