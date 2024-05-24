@@ -104,3 +104,10 @@ body.modal-open {
 font-size: 40px;
 color: blueviolet;
 }
+.ReactFlagsSelect-module_selectBtn__19wW7{
+  border: 1px solid;
+  &:hover,
+    &:focus {
+    border: 1px solid white;
+    } 
+}
